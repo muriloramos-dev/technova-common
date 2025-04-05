@@ -1,4 +1,4 @@
-package com.technova.dto;
+package com.technova.dto.user;
 
 public class UserResponseDTO {
     private boolean success;
