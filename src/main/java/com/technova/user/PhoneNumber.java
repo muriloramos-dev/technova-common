@@ -1,4 +1,4 @@
-package com.technova.dto.user;
+package com.technova.user;
 
 public class PhoneNumber {
     private String countryCode;

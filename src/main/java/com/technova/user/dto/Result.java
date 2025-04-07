@@ -1,4 +1,4 @@
-package com.technova.dto;
+package com.technova.user.dto;
 
 public class Result<T> {
     private T data;

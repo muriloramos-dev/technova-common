@@ -1,4 +1,4 @@
-package com.technova.exceptions.user;
+package com.technova.user.exceptions;
 
 public class UserAlreadyExistsException extends RuntimeException {
     public UserAlreadyExistsException(String message) {

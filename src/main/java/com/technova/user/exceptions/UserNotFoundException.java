@@ -1,4 +1,4 @@
-package com.technova.exceptions.user;
+package com.technova.user.exceptions;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException(String message) {
