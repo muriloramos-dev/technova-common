@@ -37,6 +37,17 @@ public class PhoneNumber {
         this.number = number;
     }
 
+    public PhoneNumber(String number) {
+        if (number != null && number.contains("-")) {
+            String[] parts = number.split("-");
+            this.countryCode = parts.length > 0 ? parts[0] : null;
+            this.stateCode = parts.length > 1 ? parts[1] : null;
+            this.number = parts.length > 2 ? parts[2] : null;
+        } else {
+            this.number = number;
+        }
+    }
+
     public PhoneNumber() {
     }
 }
