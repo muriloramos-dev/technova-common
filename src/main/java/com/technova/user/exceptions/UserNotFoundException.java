@@ -1,11 +1,10 @@
 package com.technova.user.exceptions;
 
-public class UserNotFoundException extends RuntimeException {
+import com.technova.exceptions.BaseException;
+
+public class UserNotFoundException extends BaseException {
     public UserNotFoundException(String message) {
         super(message);
     }
 
-    public UserNotFoundException(String message, Throwable cause) {
-        super("User not found: " + message, cause);
-    }
 }

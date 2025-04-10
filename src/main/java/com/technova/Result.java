@@ -1,8 +1,10 @@
-package com.technova.user.dto;
+package com.technova;
+
+import com.technova.exceptions.BaseException;
 
 public class Result<T> {
     private T data;
-    private RuntimeException error;
+    private BaseException error;
     private boolean hasError;
 
     public static <T> Result<T> success(T data) {
@@ -11,7 +13,7 @@ public class Result<T> {
         return r;
     }
 
-    public static <T> Result<T> error(RuntimeException e) {
+    public static <T> Result<T> error(BaseException e) {
         Result<T> r = new Result<>();
         r.error = e;
         r.hasError = true;
@@ -26,11 +28,11 @@ public class Result<T> {
         this.data = data;
     }
 
-    public RuntimeException getError() {
+    public BaseException getError() {
         return error;
     }
 
-    public void setError(RuntimeException error) {
+    public void setError(BaseException error) {
         this.error = error;
     }
 
