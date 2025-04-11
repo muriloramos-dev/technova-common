@@ -1,4 +1,4 @@
-package com.technova.user;
+package com.technova.user.dto;
 
 public class Address {
     private String street;

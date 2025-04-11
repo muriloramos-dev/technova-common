@@ -1,7 +1,7 @@
-package com.technova.user;
+package com.technova.user.dto;
 
 public class UserResponseDTO {
-    private Object id;
+    private String id;
     private String email;
     private String password;
     private String role;
@@ -12,11 +12,11 @@ public class UserResponseDTO {
     public UserResponseDTO() {
     }
 
-    public Object getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -60,7 +60,7 @@ public class UserResponseDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public UserResponseDTO(Object id, String email, String password, String role, Address address, PhoneNumber phoneNumber) {
+    public UserResponseDTO(String id, String email, String password, String role, Address address, PhoneNumber phoneNumber) {
         this.id = id;
         this.email = email;
         this.password = password;

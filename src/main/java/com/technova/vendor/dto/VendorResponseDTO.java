@@ -1,10 +1,11 @@
 package com.technova.vendor.dto;
 
-import com.technova.user.Address;
-import com.technova.user.PhoneNumber;
+import com.technova.user.dto.Address;
+import com.technova.user.dto.PhoneNumber;
 
 public class VendorResponseDTO {
-    private Object id;
+    private String id;
+    private String companyName;
     private String email;
     private String password;
     private String role;
@@ -15,12 +16,20 @@ public class VendorResponseDTO {
     public VendorResponseDTO() {
     }
 
-    public Object getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getEmail() {
@@ -63,8 +72,9 @@ public class VendorResponseDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public VendorResponseDTO(Object id, String email, String password, String role, Address address, PhoneNumber phoneNumber) {
+    public VendorResponseDTO(String id, String companyName, String email, String password, String role, Address address, PhoneNumber phoneNumber) {
         this.id = id;
+        this.companyName = companyName;
         this.email = email;
         this.password = password;
         this.role = role;

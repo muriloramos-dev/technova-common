@@ -1,7 +1,7 @@
 package com.technova.vendor.dto;
 
-import com.technova.user.Address;
-import com.technova.user.PhoneNumber;
+import com.technova.user.dto.Address;
+import com.technova.user.dto.PhoneNumber;
 
 public class VendorFindDTO {
 
