@@ -8,12 +8,9 @@ pipeline {
     stages {
 		stage('Checkout') {
 			steps {
-				checkout scm
-            }
-        }
-		stage('Checkout') {
-			steps {
-				git credentialsId: GIT_CREDENTIALS, url: 'git@github.com:gwrgwr/technova-common.git'
+				git(
+                    url: 'https://github.com/gwrgwr/technova-common.git'
+                )
             }
         }
         stage('Build Docker Image') {
