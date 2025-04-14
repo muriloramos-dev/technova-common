@@ -7,7 +7,7 @@ pipeline {
     stages {
 		stage('Checkout') {
 			steps {
-				sh 'git clone https://github.com/gwrgwr/technova-common.git'
+				checkout scm
         	}
         }
         stage('Build Docker Image') {
