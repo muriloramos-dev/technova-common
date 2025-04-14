@@ -13,7 +13,7 @@ pipeline {
         stage('Build Docker Image') {
 			steps {
 				script {
-					sh "docker build -t $DOCKER_IMAGE_NAME:${env.BUILD_ID} ."
+					def customImage = docker.build("$DOCKER_IMAGE_NAME:${env.BUILD_ID}", "-f Dockerfile .")
                 }
             }
         }
