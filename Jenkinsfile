@@ -17,15 +17,6 @@ pipeline {
                 }
             }
         }
-        stage('Login to Docker Hub') {
-			steps {
-				script {
-					docker.withRegistry('', DOCKER_CREDENTIALS) {
-						echo 'Logged in to Docker Hub'
-                    }
-                }
-            }
-        }
         stage('Push Docker Image') {
 			steps {
 				script {
