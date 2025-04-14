@@ -8,7 +8,8 @@ pipeline {
 		stage('Checkout') {
 			steps {
 				git(
-                    url: 'https://github.com/gwrgwr/technova-common.git'
+                    url: 'https://github.com/gwrgwr/technova-common.git',
+                    credentialsId: null
                 )
             }
         }
