@@ -6,9 +6,13 @@ pipeline {
         GIT_CREDENTIALS = 'git-ssh-credentials'
     }
     stages {
+		stage('Initialize'){
+			def dockerHome = tool 'myDocker'
+        	env.PATH = "${dockerHome}/bin:${env.PATH}"
+    	}
 		stage('Checkout') {
 			steps {
-                git credentialsId: GIT_CREDENTIALS, url: 'git@github.com:gwrgwr/technova-common.git'
+				git credentialsId: GIT_CREDENTIALS, url: 'git@github.com:gwrgwr/technova-common.git'
             }
         }
         stage('Build Docker Image') {
