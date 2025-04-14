@@ -14,7 +14,7 @@ pipeline {
         stage('Build Docker Image') {
 			steps {
 				script {
-					sh 'docker build -t $DOCKER_IMAGE_NAME:${env.BUILD_ID} .'
+					sh "docker build -t $DOCKER_IMAGE_NAME:${env.BUILD_ID} ."
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
 			steps {
 				script {
 					docker.withRegistry('', DOCKER_CREDENTIALS) {
-						sh 'docker push $DOCKER_IMAGE_NAME:${env.BUILD_ID}'
+						sh "docker push $DOCKER_IMAGE_NAME:${env.BUILD_ID}"
                     }
                 }
             }
