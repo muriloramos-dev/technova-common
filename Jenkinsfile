@@ -3,7 +3,6 @@ pipeline {
     environment {
 		DOCKER_IMAGE_NAME = 'gwrgwr/murilo.ramos'
         DOCKER_CREDENTIALS = 'docker-hub-credentials'
-        GIT_CREDENTIALS = 'git-ssh-credentials'
     }
     stages {
 		stage('Checkout') {
