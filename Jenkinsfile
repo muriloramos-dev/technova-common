@@ -7,10 +7,9 @@ pipeline {
     stages {
 		stage('Checkout') {
 			steps {
-				git(
-                    url: 'https://github.com/gwrgwr/technova-common.git',
-                    credentialsId: null
-                )
+				checkout scmGit(
+    				branches: [[name: 'master']],
+    				userRemoteConfigs: [[url: 'git@github.com:gwrgwr/technova-common.git']])
             }
         }
         stage('Build Docker Image') {
