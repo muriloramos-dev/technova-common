@@ -13,16 +13,7 @@ pipeline {
         stage('Build Docker Image') {
 			steps {
 				script {
-					sh "docker build -t $DOCKER_IMAGE_NAME:${env.BUILD_ID} ."
-                }
-            }
-        }
-        stage('Login to Docker Hub') {
-			steps {
-				script {
-					docker.withRegistry('', DOCKER_CREDENTIALS) {
-						echo 'Logged in to Docker Hub'
-                    }
+					def customImage = docker.build("$DOCKER_IMAGE_NAME:${env.BUILD_ID}", "-f Dockerfile .")
                 }
             }
         }
