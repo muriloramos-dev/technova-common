@@ -5,6 +5,8 @@ public class UserCreateDTO {
 
     private String email;
 
+    private String cpf;
+
     private String password;
 
     private PhoneNumber phoneNumber;
@@ -51,9 +53,18 @@ public class UserCreateDTO {
         this.address = address;
     }
 
-    public UserCreateDTO(String name, String email, String password, PhoneNumber phoneNumber, Address address) {
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public UserCreateDTO(String name, String email, String cpf, String password, PhoneNumber phoneNumber, Address address) {
         this.name = name;
         this.email = email;
+        this.cpf = cpf;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.address = address;
