@@ -11,6 +11,8 @@ public class RabbitUserConstants {
     public static final String USER_DELETE_REQUEST_ROUTING_KEY = "user.delete";
     public static final String USER_UPDATE_REQUEST_QUEUE = "user-update-request";
     public static final String USER_UPDATE_REQUEST_ROUTING_KEY = "user.update";
+    public static final String USER_CONFIRM_EMAIL_ROUTING_KEY = "user.confirm_email";
+    public static final String USER_CONFIRM_EMAIL_QUEUE = "user-confirm-email";
     public static final String USER_EXCHANGE = "user-exchange";
 
     public RabbitUserConstants() {}
