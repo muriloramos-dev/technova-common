@@ -1,11 +1,14 @@
 package com.technova.user.dto;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class PhoneNumber {
     private String countryCode;
 
     private String stateCode;
 
-    private String number;
+    private String phoneNumber;
 
     public String getCountryCode() {
         return countryCode;
@@ -24,17 +27,17 @@ public class PhoneNumber {
     }
 
     public String getNumber() {
-        return number;
+        return phoneNumber;
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.phoneNumber = number;
     }
 
     public PhoneNumber(String countryCode, String stateCode, String number) {
         this.countryCode = countryCode;
         this.stateCode = stateCode;
-        this.number = number;
+        this.phoneNumber = number;
     }
 
     public PhoneNumber(String number) {
@@ -42,9 +45,9 @@ public class PhoneNumber {
             String[] parts = number.split("-");
             this.countryCode = parts.length > 0 ? parts[0] : null;
             this.stateCode = parts.length > 1 ? parts[1] : null;
-            this.number = parts.length > 2 ? parts[2] : null;
+            this.phoneNumber = parts.length > 2 ? parts[2] : null;
         } else {
-            this.number = number;
+            this.phoneNumber = number;
         }
     }
 

@@ -13,6 +13,13 @@ public class RabbitUserConstants {
     public static final String USER_UPDATE_REQUEST_ROUTING_KEY = "user.update";
     public static final String USER_CONFIRM_EMAIL_ROUTING_KEY = "user.confirm_email";
     public static final String USER_CONFIRM_EMAIL_QUEUE = "user-confirm-email";
+    public static final String USER_SOFT_DELETE_REQUEST_QUEUE = "user-soft-delete-request";
+    public static final String USER_SOFT_DELETE_REQUEST_ROUTING_KEY = "user.soft.delete.request";
+    public static final String USER_ACTIVE_REQUEST_QUEUE = "user-active-request";
+    public static final String USER_ACTIVE_REQUEST_ROUTING_KEY = "user.active.request";
+    public static final String USER_FIND_BY_CREDENTIALS_REQUEST_QUEUE = "user-find-by-credentials-request";
+    public static final String USER_FIND_BY_CREDENTIALS_REQUEST_ROUTING_KEY = "user.find_by_credentials.request";
+
     public static final String USER_EXCHANGE = "user-exchange";
 
     public RabbitUserConstants() {}

@@ -1,22 +1,22 @@
 package com.technova.user.dto;
 
 public class UserLoginRequest {
-    private String username;
+    private String credential;
     private String password;
 
     public UserLoginRequest() {}
 
-    public UserLoginRequest(String username, String password) {
-        this.username = username;
+    public UserLoginRequest(String credential, String password) {
+        this.credential = credential;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getCredential() {
+        return credential;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setCredential(String credential) {
+        this.credential = credential;
     }
 
     public String getPassword() {

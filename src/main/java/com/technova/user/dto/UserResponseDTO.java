@@ -1,10 +1,13 @@
 package com.technova.user.dto;
 
+import com.technova.user.enums.UserStatus;
+
 public class UserResponseDTO {
     private String id;
     private String email;
     private String password;
     private String role;
+    private UserStatus status;
     private Address address;
     private PhoneNumber phoneNumber;
 
@@ -60,12 +63,21 @@ public class UserResponseDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public UserResponseDTO(String id, String email, String password, String role, Address address, PhoneNumber phoneNumber) {
+    public UserResponseDTO(String id, String email, String password, String role, UserStatus status, Address address, PhoneNumber phoneNumber) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.role = role;
+        this.status = status;
         this.address = address;
         this.phoneNumber = phoneNumber;
+    }
+
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(UserStatus status) {
+        this.status = status;
     }
 }
