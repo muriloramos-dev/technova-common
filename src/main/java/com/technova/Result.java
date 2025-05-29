@@ -44,4 +44,3 @@ public class Result<T> {
         this.hasError = hasError;
     }
 }
-
