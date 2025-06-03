@@ -6,4 +6,5 @@ public class VendorAlreadyExistsException extends BaseException {
     public VendorAlreadyExistsException(String message) {
         super(message);
     }
+    public VendorAlreadyExistsException() {}
 }
