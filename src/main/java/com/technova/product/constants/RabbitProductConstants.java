@@ -2,6 +2,7 @@ package com.technova.product.constants;
 
 public class RabbitProductConstants {
     public static final String PRODUCT_EXCHANGE = "product-exchange";
+    public static final String PRODUCT_FANOUT_EXCHANGE = "product-fanout-exchange";
 
     public static final String PRODUCT_GET_ID_QUEUE = "product-get-id-queue";
     public static final String PRODUCT_GET_ID_ROUTING_KEY = "product.get.id";
@@ -20,4 +21,5 @@ public class RabbitProductConstants {
 
     public static final String PRODUCT_GET_CATEGORY_QUEUE = "product-get-category-queue";
     public static final String PRODUCT_GET_CATEGORY_ROUTING_KEY = "product.get.category";
+
 }
